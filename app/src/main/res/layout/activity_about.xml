@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_alignParentTop="true"
+            android:textColor="#FED8B1"/>
+
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/my_toolbar_profile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="119dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="142dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/yuss"/>
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="Name: Nurul Yusra Binti Ayob"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: 2021868864"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_below="@id/textViewName"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class: RCS2405B"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_below="@id/textViewID"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/logoabout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give up on calculations and spreadsheets! With zakat apps, you have easy access to the power of precise zakat assessment. Bid farewell to endless hours spent examining figures and welcome to a hassle-free, contemporary approach to fulfilling your zakat duty."
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_below="@id/textViewClass"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewGitHubLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoabout"
+            android:text="Visit GitHub Repository"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="openGitHubLink"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/textViewCopyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2023 Nurul Yusra. All rights reserved."
+            android:layout_below="@id/textViewGitHubLink"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
+</ScrollView>

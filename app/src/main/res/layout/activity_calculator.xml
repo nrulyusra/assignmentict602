@@ -1,0 +1,126 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:textColor="#FED8B1"/>
+
+    <TextView
+        android:id="@+id/labelWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="16dp"
+        android:text="Weight of Gold (grams):" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelWeight"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/labeltype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightEditText"
+        android:layout_marginTop="16dp"
+        android:text="Keep and Wear"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupType"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_below="@id/labeltype"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonKeep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep" />
+
+        <RadioButton
+            android:id="@+id/radioButtonWear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wear" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/labelCurrentGoldValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupType"
+        android:layout_marginTop="16dp"
+        android:text="Current Gold Value per Gram (RM):" />
+
+    <EditText
+        android:id="@+id/currentGoldValueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelCurrentGoldValue"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Reset"
+        android:textColor="#FED8B1"/>
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentGoldValueEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Calculate Zakat"
+        app:iconTint="#E91E63"
+        android:textColor="#FED8B1"/>
+
+    <TextView
+        android:id="@+id/totalValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resetButton"
+        android:layout_marginTop="16dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/zakatPayableTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalValueTextView"
+        android:layout_marginTop="8dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/totalZakatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zakatPayableTextView"
+        android:layout_marginTop="8dp"
+        android:text="" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ZakatCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#A1083B</item>
+
+        <item name="android:textColorPrimary" >#FED8B1</item>
+    </style>
+
+    <style name="Theme.ZakatCalculator" parent="Base.Theme.ZakatCalculator" />
+</resources>
